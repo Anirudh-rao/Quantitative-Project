@@ -8,5 +8,13 @@
         "*.tsv": "duckdb.dataFileViewer",
         "*.xlsx": "duckdb.dataFileViewer"
     },
-    "duckdb.defaultDatabase": "memory"
+    "duckdb.defaultDatabase": "FinancialDB",
+    "duckdb.databases": [
+        {
+            "alias": "FinancialDB",
+            "type": "file",
+            "path": "/Users/rookr/Documents/FinancialWH/FinancialDB.duckdb",
+            "attached": true
+        }
+    ]
 }
