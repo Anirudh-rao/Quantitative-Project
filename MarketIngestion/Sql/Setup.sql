@@ -59,3 +59,8 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA finance_db.BANK_NIF
 
 -- Future-proof: Automatically grant privileges on any tables created in the future
 GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA finance_db.BANK_NIFTY TO ROLE finance_analyst_role;
+
+-- Granting Create table from this role
+Use Role Sysadmin;
+
+GRANT CREATE TABLE ON SCHEMA FINANCE_DB.BANK_NIFTY TO ROLE finance_analyst_role;
