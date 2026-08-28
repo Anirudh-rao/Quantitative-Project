@@ -33,8 +33,8 @@ CREATE OR REPLACE DATABASE finance_db;
 USE DATABASE finance_db;
 
 -- Create Schema for each index.
-CREATE OR REPLACE SCHEMA BANK_NIFTY;
-USE  SCHEMA BANK_NIFTY;
+CREATE OR REPLACE SCHEMA Raw;
+USE  SCHEMA Raw;
 
 -- Switch to SYSADMIN or an owner role
 USE ROLE SYSADMIN;
@@ -52,15 +52,15 @@ USE ROLE SECURITYADMIN;
 GRANT USAGE ON DATABASE finance_db TO ROLE finance_analyst_role;
 
 -- Grant usage on the schema
-GRANT USAGE ON SCHEMA finance_db.BANK_NIFTY TO ROLE finance_analyst_role;
+GRANT USAGE ON SCHEMA finance_db.Raw TO ROLE finance_analyst_role;
 
 -- Grant data manipulation privileges on existing tables
-GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA finance_db.BANK_NIFTY TO ROLE finance_analyst_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA finance_db.Raw TO ROLE finance_analyst_role;
 
 -- Future-proof: Automatically grant privileges on any tables created in the future
-GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA finance_db.BANK_NIFTY TO ROLE finance_analyst_role;
+GRANT SELECT, INSERT, UPDATE, DELETE ON FUTURE TABLES IN SCHEMA finance_db.Raw TO ROLE finance_analyst_role;
 
 -- Granting Create table from this role
 Use Role Sysadmin;
 
-GRANT CREATE TABLE ON SCHEMA FINANCE_DB.BANK_NIFTY TO ROLE finance_analyst_role;
+GRANT CREATE TABLE ON SCHEMA FINANCE_DB.Raw TO ROLE finance_analyst_role;
