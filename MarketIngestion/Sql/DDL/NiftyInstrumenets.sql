@@ -1,0 +1,23 @@
+create or replace TABLE FINANCE_DB.RAW."NiftyInstrument" (
+	"exchange" VARCHAR(16777216),
+	"exchange_token" VARCHAR(16777216),
+	"trading_symbol" VARCHAR(16777216),
+	"groww_symbol" VARCHAR(16777216),
+	"name" VARCHAR(16777216),
+	"instrument_type" VARCHAR(16777216),
+	"segment" VARCHAR(16777216),
+	"series" VARCHAR(16777216),
+	"isin" VARCHAR(16777216),
+	"underlying_symbol" VARCHAR(16777216),
+	"underlying_exchange_token" VARCHAR(16777216),
+	"expiry_date" VARCHAR(16777216),
+	"strike_price" VARCHAR(16777216),
+	"lot_size" VARCHAR(16777216),
+	"tick_size" VARCHAR(16777216),
+	"freeze_quantity" VARCHAR(16777216),
+	"is_reserved" VARCHAR(16777216),
+	"buy_allowed" VARCHAR(16777216),
+	"sell_allowed" VARCHAR(16777216),
+	"internal_trading_symbol" VARCHAR(16777216),
+	"is_intraday" VARCHAR(16777216)
+);
